@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2017",
+        "outDir": "./out",
+        "lib": [
+            "es2017",
+            "esnext.asynciterable"
+        ],
+        "sourceMap": true,
+        "rootDir": ".",
+        "experimentalDecorators": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

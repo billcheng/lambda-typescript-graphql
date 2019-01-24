@@ -1,0 +1,31 @@
+{
+  "name": "hello_world_typescript",
+  "version": "1.0.0",
+  "description": "hello world sample for NodeJS in typescript",
+  "main": "out/src/app.js",
+  "repository": "https://github.com/billcheng/lambda-typescript-starter",
+  "author": "Bill Cheng",
+  "license": "MIT",
+  "scripts": {
+    "serve": "npm run build && sam local start-api",
+    "compile": "node ./node_modules/typescript/bin/tsc -p ./src",
+    "build": "npm run compile && cp package.json out/src && sam build",
+    "test": "NODE_ENV=test ts-node ./node_modules/jasmine/bin/jasmine",
+    "test:watch": "nodemon --ext ts --exec \"npm test\""
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "graphql": "^14.1.1"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/graphql": "^14.0.5",
+    "@types/jasmine": "^3.3.7",
+    "@types/node": "^10.0.1",
+    "jasmine": "^3.3.1",
+    "nodemon": "^1.18.1",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.10.0",
+    "typescript": "^3.2.4"
+  }
+}
